@@ -6,11 +6,11 @@ const PLACES_HOLDER = ["", ONES, TENS, HUNDREDS, THOUSANDS];
 
 function toRomanNumeral(number) {
   var result = "";
-  var numArray = number.toString().split("");
-  var arrLength = numArray.length;
-  numArray.forEach(function(num) {
-    result += buildRomanNumeral(parseInt(num), PLACES_HOLDER[arrLength]);
-    arrLength--;
+  var numbers = number.toString().split("");
+  var placesElement = numbers.length;
+  numbers.forEach(function(number) {
+    result += buildRomanNumeral(parseInt(number), PLACES_HOLDER[placesElement]);
+    placesElement--;
   });
   return result;
 }

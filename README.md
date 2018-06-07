@@ -1,6 +1,6 @@
 # Roman Numerals
 
-#### Epicodus Intro to Programming: Lesson, Date
+#### Epicodus Intro to Programming, 06/07/2018
 
 #### By Will Swanson and Abel Trotter
 
@@ -15,6 +15,7 @@ Application to convert decimal numerals into Roman numerals
 1. For input of 5, it concats "V" to our answer.
 1. For input of 6 - 8, it concats "V", followed by "I" 1 - 3 times to our answer.
 1. For input of 9, it concats "IX" to our answer.
+1. Modularize code with arrays for each place.
 
 ## Setup/Contribution Requirements
 
