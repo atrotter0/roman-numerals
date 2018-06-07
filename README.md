@@ -14,6 +14,7 @@ Application to convert decimal numerals into Roman numerals
 1. For input of 4, it concats "IV" to our answer.
 1. For input of 5, it concats "V" to our answer.
 1. For input of 6 - 8, it concats "V", followed by "I" 1 - 3 times to our answer.
+1. For input of 9, it concats "IX" to our answer.
 
 ## Setup/Contribution Requirements
 
@@ -29,10 +30,8 @@ Application to convert decimal numerals into Roman numerals
 
 ## Links
 
-*
-
 ## License
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **Name**
+Copyright (c) 2018 **Abel Trotter and Will Swanson**
