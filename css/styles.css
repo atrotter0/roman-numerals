@@ -1,0 +1,15 @@
+form {
+  margin-top: 30px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+#results-box {
+  display: none;
+}
+
+#results {
+  font-size: 30px;
+}

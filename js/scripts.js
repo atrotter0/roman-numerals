@@ -4,9 +4,9 @@ const HUNDREDS = ["C", "D", "M"];
 const THOUSANDS = ["M"];
 const PLACES_HOLDER = ["", ONES, TENS, HUNDREDS, THOUSANDS];
 
-function toRomanNumeral(number) {
+function toRomanNumeral(input) {
   var result = "";
-  var numbers = number.toString().split("");
+  var numbers = input.toString().split("");
   var placesElement = numbers.length;
   numbers.forEach(function(number) {
     result += buildRomanNumeral(parseInt(number), PLACES_HOLDER[placesElement]);
@@ -36,8 +36,22 @@ function buildRomanNumeral(number, array) {
   return answer;
 }
 
+function displayResult(results) {
+  $("#converter").hide();
+  $("#results-box").fadeIn(800);
+  $("#results").text(results);
+}
+
 $(document).ready(function() {
-  var input = parseInt(3999);
-  var result = toRomanNumeral(input);
-  console.log(result);
+  $("#submit").click(function(e) {
+    e.preventDefault();
+
+    var input = parseInt($("#input").val());
+    var result = toRomanNumeral(input);
+    displayResult(result);
+  });
+
+  $("#try-again").click(function() {
+    location.reload();
+  });
 });
