@@ -46,8 +46,13 @@ $(document).ready(function() {
   $("#submit").click(function(e) {
     e.preventDefault();
 
-    var input = parseInt($("#input").val());
-    var result = toRomanNumeral(input);
+    var input = $("#input").val();
+    if (input !== "" && input < 4000 && input > 0) {
+      input = parseInt(input);
+      var result = toRomanNumeral(input);
+    } else {
+      var result = "You need to enter a value between 1 and 3999";
+    }
     displayResult(result);
   });
 
