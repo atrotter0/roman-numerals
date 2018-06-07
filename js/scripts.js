@@ -1,16 +1,16 @@
 const ONES = ["I", "V", "X"];
 const TENS = ["X", "L", "C"];
-const HUNDREDS = ["X", "D", "M"];
+const HUNDREDS = ["C", "D", "M"];
 const THOUSANDS = ["M"];
-const NAMES = ["ONES","TENS"];
+const PLACES_HOLDER = ["", ONES, TENS, HUNDREDS, THOUSANDS];
 
 function toRomanNumeral(number) {
   var result = "";
-  var numArray = number.split("");
-  var counter = 0;
+  var numArray = number.toString().split("");
+  var arrLength = numArray.length;
   numArray.forEach(function(num) {
-    result += buildRomanNumeral(number, NAMES[counter]);
-    counter++;
+    result += buildRomanNumeral(parseInt(num), PLACES_HOLDER[arrLength]);
+    arrLength--;
   });
   return result;
 }
@@ -37,7 +37,7 @@ function buildRomanNumeral(number, array) {
 }
 
 $(document).ready(function() {
-  var input = parseInt(12);
+  var input = parseInt(3999);
   var result = toRomanNumeral(input);
   console.log(result);
 });
